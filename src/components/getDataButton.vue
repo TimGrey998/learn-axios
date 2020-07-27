@@ -17,15 +17,11 @@ export default {
   methods: {
     getData() {
        request({
-           baseConfig: {
-               url: 'home/multidata'
-           },
-           success(res) {
-               console.log(res)
-           },
-           failure(err) {
-               console.log(err)
-           }
+           url: '/home/multidata'
+       }).then(res => {
+           console.log(res)
+       }).catch(err => {
+           console.log(err)
        })
     }
   },
